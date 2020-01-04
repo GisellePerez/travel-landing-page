@@ -1,0 +1,20 @@
+.calendar-header {
+  display: flex;
+  justify-content: center;
+  
+  .month-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+
+    .month-header__name {
+      font-size: 0.8rem;
+    }
+    
+    .month-header__amount {
+      font-size: 0.5rem;
+    }
+  }
+}

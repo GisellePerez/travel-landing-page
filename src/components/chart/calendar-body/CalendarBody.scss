@@ -1,0 +1,26 @@
+.calendar-body { 
+  .calendar-body__bars-container {
+    // display: grid;
+    // grid-auto-columns: 1fr;
+    // grid-template-rows: repeat(100, 1fr) 1.4rem;
+    // grid-column-gap: 5px;
+
+    display: grid;
+    grid:  repeat(5, auto) max-content / max-content repeat(7, auto);
+
+    .day-bar__label {
+      grid-row-start: -2;
+    }
+
+    .day-bar__bar {
+      // grid-row-start: var(--start);
+      // grid-row-end: -2;
+    
+      height: 100%;
+      grid-row: 1 / -2;
+      background: palegoldenrod linear-gradient(to top, gold var(--h), transparent var(--h));
+      width: 45px;
+      justify-self: center;
+    }
+  }
+}
