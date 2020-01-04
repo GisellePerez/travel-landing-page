@@ -11,13 +11,38 @@ const CalendarBody = () => {
     {abbr: 'Vie', date: '05', amount: 10},
     {abbr: 'Sab', date: '06', amount: 100},
     {abbr: 'Dom', date: '07', amount: 80},
+    {abbr: 'Lun', date: '08', amount: 80},
+    {abbr: 'Mar', date: '09', amount: 20},
+    {abbr: 'Mie', date: '10', amount: 60},
+    {abbr: 'Jue', date: '11', amount: 40},
+    {abbr: 'Vie', date: '12', amount: 10},
+    {abbr: 'Sab', date: '13', amount: 100},
+    {abbr: 'Dom', date: '14', amount: 80},
+    {abbr: 'Lun', date: '15', amount: 80},
+    {abbr: 'Mar', date: '16', amount: 20},
+    {abbr: 'Mie', date: '17', amount: 60},
+    {abbr: 'Jue', date: '18', amount: 40},
+    {abbr: 'Vie', date: '19', amount: 10},
+    {abbr: 'Sab', date: '20', amount: 100},
+    {abbr: 'Dom', date: '07', amount: 80},
+    {abbr: 'Lun', date: '21', amount: 75},
+    {abbr: 'Mar', date: '22', amount: 20},
+    {abbr: 'Mie', date: '23', amount: 64},
+    {abbr: 'Jue', date: '24', amount: 40},
+    {abbr: 'Vie', date: '25', amount: 10},
+    {abbr: 'Sab', date: '26', amount: 100},
+    {abbr: 'Dom', date: '27', amount: 80},
+    {abbr: 'Jue', date: '28', amount: 45},
+    {abbr: 'Vie', date: '29', amount: 18},
+    {abbr: 'Sab', date: '30', amount: 95},
+    {abbr: 'Dom', date: '31', amount: 80}
   ];
 
   const daysBars = daysData.map((day, i) => {
     // const style = { height: var(--h) };
     return (
-      <div className="day-bar__bar" key={i} style={{ '--h': `${day.amount}%` }}></div>
-    );
+      <div className="day-bar__bar" key={i} style={{ '--height': `${day.amount}%`,  '--daysLength': `${daysData.length - 1 }`}}></div>
+    ); 
   }); 
 
   // eslint-disable-next-line
@@ -28,7 +53,7 @@ const CalendarBody = () => {
 
   const daysLabels =  daysData.map((day, i) => {
     return (
-      <span className="day-bar__label" key={i}> { day.abbr } { day.date } </span>
+      <span className="day-bar__label" key={i}> { `${day.abbr} ${day.date}` } </span>
     );
   });
 

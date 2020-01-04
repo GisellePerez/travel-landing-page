@@ -6,21 +6,33 @@
     // grid-column-gap: 5px;
 
     display: grid;
-    grid:  repeat(5, auto) max-content / max-content repeat(7, auto);
+    // grid-gap: 0.2rem;
+    // grid:  repeat(5, auto) max-content / max-content repeat(7, auto);
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 2fr;
+    grid-template-columns: repeat(32, 1fr);
+    // grid: repeat(5, auto) max-content/max-content repeat( 31, auto);
+    height: 50vh;
 
     .day-bar__label {
       grid-row-start: -2;
+      transform: rotate(-180deg);
+      // background: pink;
+      writing-mode: tb-lr; /*  for IE  */
+      writing-mode: vertical-lr;
     }
 
     .day-bar__bar {
       // grid-row-start: var(--start);
       // grid-row-end: -2;
     
-      height: 100%;
+      height: var(--height);
+      width: 1rem;
+      background: #00a3df;
       grid-row: 1 / -2;
-      background: palegoldenrod linear-gradient(to top, gold var(--h), transparent var(--h));
-      width: 45px;
+      // background: palegoldenrod linear-gradient(to top, gold var(--h), transparent var(--h));
       justify-self: center;
+      align-self: flex-end;
+      border-radius: 8px;
     }
   }
 }
