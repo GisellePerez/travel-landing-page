@@ -1,20 +1,61 @@
 .calendar-header {
   display: flex;
   justify-content: center;
-  
-  .month-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0.5rem;
+  overflow: hidden;
+  // padding-top: 0.4rem;
+  border-bottom: 1px solid #d2d2d2;
 
-    .month-header__name {
-      font-size: 0.8rem;
-    }
+  .calendar-header__months {
+    display: flex;
     
-    .month-header__amount {
-      font-size: 0.5rem;
+    .month-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      // padding: 0.5rem;
+      // width: 20%;
+      min-width: 20%;
+  
+      .month-header__name {
+        color: #585858;
+        font-size: 0.8rem;
+        text-transform: capitalize;
+        font-weight: 500;
+      }
+      
+      .month-header__amount {
+        font-size: 0.5rem;
+        color: #A0A0A0;
+      }
+
+      &:nth-child(3) {
+        border-bottom: 2px solid #00afe1;
+
+        .month-header__name,
+        .month-header__amount {
+          color: #00afe1;
+          font-weight: 500;
+        }
+      }
+
+      &.active {
+        border-bottom: 2px solid #00afe1;
+
+        .month-header__name,
+        .month-header__amount {
+          color: #00afe1;
+        }
+      }
     }
   }
+
+  .calendar-header__arrow {
+    span {
+      color: #929292;
+      font-size: 1rem;
+      display: inline-flex;
+    }
+  }
+
 }

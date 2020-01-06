@@ -6,9 +6,11 @@ import './Chart.scss'
 
 const Chart = () => {
   return (
-    <div className="chart">
-      <CalendarHeader />
-      <CalendarBody />
+    <div className="chart-container">
+      <div className="chart">
+        <CalendarHeader />
+        <CalendarBody />
+      </div>
     </div>
   )
 }

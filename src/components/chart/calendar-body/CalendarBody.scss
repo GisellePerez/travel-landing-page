@@ -1,4 +1,6 @@
 .calendar-body { 
+  padding: 2rem 2rem 1rem 2rem;
+
   .calendar-body__bars-container {
     // display: grid;
     // grid-auto-columns: 1fr;
@@ -11,7 +13,8 @@
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 2fr;
     grid-template-columns: repeat(32, 1fr);
     // grid: repeat(5, auto) max-content/max-content repeat( 31, auto);
-    height: 50vh;
+    height: 20vh;
+    padding-bottom: 0.5rem;
 
     .day-bar__label {
       grid-row-start: -2;
@@ -19,6 +22,10 @@
       // background: pink;
       writing-mode: tb-lr; /*  for IE  */
       writing-mode: vertical-lr;
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: #AEAEAE;
+      justify-self: center;
     }
 
     .day-bar__bar {
@@ -26,13 +33,21 @@
       // grid-row-end: -2;
     
       height: var(--height);
-      width: 1rem;
+      width: 0.8rem;
       background: #00a3df;
       grid-row: 1 / -2;
       // background: palegoldenrod linear-gradient(to top, gold var(--h), transparent var(--h));
       justify-self: center;
       align-self: flex-end;
       border-radius: 8px;
+
     }
+  }
+
+  .calendar-body__message {
+    margin: 0;
+    font-size: 0.6rem;
+    color: #A0A0A0;
+    padding-top: 0.5rem;
   }
 }

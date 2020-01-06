@@ -1,6 +1,8 @@
 .form-container {
+  width: 100%;
+
   .form-container__form {
-    width: 85%;
+    width: 80%;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 3fr 3fr 3fr 3fr 1fr;
@@ -31,7 +33,7 @@
       .form__input-field { 
         color: #817878;
         font-size: 0.9rem;
-        font-weight: 600;
+        font-weight: 400;
         border: none;
         width: 100%;
 

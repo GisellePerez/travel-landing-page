@@ -6,18 +6,18 @@ const CalendarHeader = () => {
   const selectedCurrency = 'AR$';
 
   const monthsData = [
-    { name: 'Enero', amount: 15100 },
-    { name: 'febrero', amount: 16100 },
-    { name: 'marzo', amount: 14500 },
-    { name: 'Abril', amount: 15100 },
-    { name: 'Mayo', amount: 16100 },
-    { name: 'junio', amount: 14500 },
-    { name: 'julio', amount: 17800 },
-    { name: 'agosto', amount: 22500 },
-    { name: 'septiembre', amount: 16100 },
-    { name: 'octubre', amount: 14500 },
-    { name: 'noviembre', amount: 17800 },
-    { name: 'diciembre', amount: 22500 },
+    { name: 'Enero', amount: 15100, isSelected: false },
+    { name: 'febrero', amount: 16100, isSelected: false },
+    { name: 'marzo', amount: 14500, isSelected: false },
+    { name: 'Abril', amount: 15100, isSelected: false },
+    { name: 'Mayo', amount: 16100, isSelected: false },
+    { name: 'junio', amount: 14500, isSelected: false },
+    { name: 'julio', amount: 17800, isSelected: false },
+    { name: 'agosto', amount: 22500, isSelected: false },
+    { name: 'septiembre', amount: 16100, isSelected: false },
+    { name: 'octubre', amount: 14500, isSelected: false },
+    { name: 'noviembre', amount: 17800, isSelected: false },
+    { name: 'diciembre', amount: 22500, isSelected: false },
   ];
 
   const monthsDivs = monthsData.map((month, i) => {
@@ -29,9 +29,24 @@ const CalendarHeader = () => {
     );
   });
 
+  const onPreviousMonths = () =>  {
+    console.log('prev')
+  }
+
+  const onNextMonths = () => {
+    console.log('next')
+  }
+
+  // main return 
   return (
     <div className="calendar-header">
-      { monthsDivs }
+      <div className="calendar-header__arrow previous" onClick={ onPreviousMonths }> 
+        <span> &#8249; </span> 
+      </div>
+      <div className="calendar-header__months"> { monthsDivs } </div>
+      <div className="calendar-header__arrow next" onClick={ onNextMonths }> 
+        <span> &#8250; </span>
+      </div>
     </div>
   )
 }
