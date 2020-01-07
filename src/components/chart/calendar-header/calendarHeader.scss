@@ -1,12 +1,14 @@
 .calendar-header {
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-  // padding-top: 0.4rem;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   border-bottom: 1px solid #d2d2d2;
+  overflow: hidden;
+  // justify-content: center;
+  // padding-top: 0.4rem;
 
   .calendar-header__months {
     display: flex;
+    overflow: hidden;
     
     .month-header {
       display: flex;
@@ -54,8 +56,13 @@
     span {
       color: #929292;
       font-size: 1rem;
-      display: inline-flex;
+      display: flex;
+      justify-content: center;
+      cursor: pointer;
     }
   }
+}
 
+@media  (min-width: 350px) and (max-width: 700px) {
+  
 }
